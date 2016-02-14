@@ -1,3 +1,4 @@
+#!/bin/sh
 qemu-system-arm \
   -M versatilepb \
   -nographic \
