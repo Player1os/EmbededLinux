@@ -1,4 +1,4 @@
-# EmbededLinuxMediaPlayer
+# Embeded Linux MediaPlayer
 
 This project uses buildroot to create a custom linux image for the arm architecture to run in a qemu virtual machine.
 Once loaded and running, the os reacts to a usb storage device being plugged, by automatically mounting it and playing all mp3 files found on it.
