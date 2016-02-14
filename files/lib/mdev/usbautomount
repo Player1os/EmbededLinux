@@ -1,0 +1,19 @@
+#!/bin/busybox ash
+if [ ! ${DEVTYPE} ] ; then
+    exit 0;
+fi
+
+mountdir="/media/${MDEV}"
+
+if [ "X${ACTION}"  ==  "Xadd" ] ; then
+	#touch adding_${MDEV}
+	mkdir $mountdir
+	mount -t auto /dev/${MDEV} $mountdir
+        find $mountdir/. -name "*.mp3" -print0 | xargs -0 mpg123 -Z -C
+fi
+
+if [ "X${ACTION}"  ==  "Xremove" ] ; then
+	#touch removing_${MDEV}
+	umount $mountdir
+	rm -r $mountdir
+fi

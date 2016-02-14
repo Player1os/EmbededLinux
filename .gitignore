@@ -1,0 +1,7 @@
+buildroot*
+
+boot/*
+rootfs.img
+
+usb_tmp/*
+usb.img
